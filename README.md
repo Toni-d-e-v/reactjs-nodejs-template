@@ -1,2 +1,2 @@
 # reactjs-nodejs-template
-This is an template which provides react js front end and node js backend with docker, this template has JWT, login, register and protected routes 
+This template offers a complete solution for building a web application with a React.js front-end and a Node.js back-end, all conveniently packaged with Docker. It includes essential features like JWT authentication, user login and registration, and secure protected routes.
