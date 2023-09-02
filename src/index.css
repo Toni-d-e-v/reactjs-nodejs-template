@@ -11,3 +11,126 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* publicNavbar */
+
+/* Style the navigation bar */
+.public-navbar {
+  background-color: #333; /* Background color for the navbar */
+  color: #fff; /* Text color for the links */
+  padding: 10px; /* Padding around the navbar */
+}
+
+/* Style the navigation links */
+.public-navbar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.public-navbar li {
+  display: inline;
+  margin-right: 20px; /* Space between navigation links */
+}
+
+/* Style the links */
+.public-navbar a {
+  text-decoration: none;
+  color: #fff; /* Text color for the links */
+  font-weight: bold;
+  transition: color 0.2s; /* Smooth color transition on hover */
+}
+
+/* Change link color on hover */
+.public-navbar a:hover {
+  color: #ff5733; /* Change the color to a different shade on hover */
+}
+
+/* global */
+
+/* Reset default margin and padding on all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set a common background color and font for the entire app */
+body {
+  background-color: #f0f0f0; /* Set your desired background color */
+  font-family: Arial, sans-serif; /* Set your desired font-family */
+
+}
+
+/* Style buttons */
+button {
+  background-color: #ff5733;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin: 10px;
+}
+
+/* Hover effect for buttons */
+button:hover {
+  background-color: #e0411c;
+}
+
+/* Style input fields */
+input {
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.2s;
+}
+
+/* Style labels for input fields */
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin: 10px;
+}
+
+header {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  height: 50vh; /* Set the height to 100% of the viewport height */
+
+  font-size: 24px; /* Font size for the header text */
+
+}
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Create flexible grid columns */
+  gap: 20px; /* Gap between grid items */
+  padding: 20px; /* Padding around the grid */
+  background-color: #f0f0f0; /* Background color for the dashboard */
+}
+
+/* Dashboard card styling */
+.dashboard .card {
+  background-color: #fff; /* Background color for cards */
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 18px;
+  width: 100%;
+}

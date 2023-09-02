@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: your-db-user
+      POSTGRES_PASSWORD: your-db-password
+      POSTGRES_DB: your-db-name
+    networks:
+      - mynetwork
+
+  nodejs:
+    build:
+      context: .
+    image: nodejs-app
+    container_name: nodejs-app
+    ports:
+      - '5000:5000'
+    environment:
+      - PORT=5000
+    depends_on:
+      - postgres
+    networks:
+      - mynetwork
+
+networks:
+  mynetwork:
