@@ -2,7 +2,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import PublicNavbar from './pNavbar';
-
+import { getBackendUrl } from '../utils/url';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import Card from 'react-bootstrap/Card';
 const Login = () => {
   const [formData, setFormData] = useState({ username: '', password: '' });
 
@@ -11,7 +14,7 @@ const Login = () => {
 
     try {
       // Make a POST request to your backend's /api/login endpoint
-      const response = await axios.post('http://localhost:5000/api/login', formData);
+      const response = await axios.post(getBackendUrl() + '/api/login', formData);
 
       // Handle success or errors
       console.log(response.data);
@@ -33,30 +36,32 @@ const Login = () => {
       <PublicNavbar></PublicNavbar>
       <header>
 
-      <h2>Login</h2>
-      <div className='card'>
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label>Username</label>
-            <input
-              type="text"
-              name="username"
-              value={formData.username}
-              onChange={(e) => setFormData({ ...formData, username: e.target.value })}
-            />
-          </div>
-          <div>
-            <label>Password</label>
-            <input
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-            />
-          </div>
-          <button type="submit">Login</button>
-        </form>
-      </div>
+
+
+
+      <Card>
+        <Card.Header>Login</Card.Header>        
+        <Card.Body>
+        <Form onSubmit={handleSubmit}>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Label>Username</Form.Label>
+          
+          <Form.Control type="username"  
+          onChange={(e) => setFormData({ ...formData, username: e.target.value })}
+          />
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+        <Form.Label>Password</Form.Label>
+          
+          <Form.Control type="password"  
+          onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+          />
+        </Form.Group>
+        <Button type="submit">Login</Button>
+
+        </Form>
+        </Card.Body>
+      </Card>
       </header>
 
     </div>

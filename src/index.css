@@ -62,30 +62,7 @@ body {
 }
 
 /* Style buttons */
-button {
-  background-color: #ff5733;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  margin: 10px;
-}
 
-/* Hover effect for buttons */
-button:hover {
-  background-color: #e0411c;
-}
-
-/* Style input fields */
-input {
-  padding: 10px;
-  margin: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
-  transition: border-color 0.2s;
-}
 
 /* Style labels for input fields */
 label {
@@ -94,15 +71,6 @@ label {
   margin-bottom: 5px;
 }
 
-.card {
-  width: 300px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  margin: 10px;
-}
 
 header {
   display: flex;

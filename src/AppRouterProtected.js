@@ -22,7 +22,10 @@ const ProtectedAppRouter = () => {
         } else {
           // User is not authorized, redirect to the login page
           // You can replace '/login' with your actual login route
-          window.location.href = '/login';
+          // clear token
+          localStorage.setItem('token', '');
+
+          window.location.href = '/';
         }
       };
   

@@ -1,3 +1,5 @@
+import { getBackendUrl } from './url';
+
 // utils/token.js
 // Function to set a JWT token in localStorage
 export const setToken = (token) => {
@@ -28,7 +30,7 @@ export const getUserInfo = async () => {
       const token = localStorage.getItem('token');
   
       // Make a GET request to the protected route with the token in the Authorization header
-      const response = await fetch('http://localhost:5000/protected/user', {
+      const response = await fetch(getBackendUrl() + '/protected/user', {
         method: 'GET',
         headers: {
           Authorization: token,
@@ -55,7 +57,7 @@ export const getUserInfo = async () => {
       const token = localStorage.getItem('token');
   
       // Make a GET request to the protected resource with the token in the Authorization header
-      const response = await fetch('http://localhost:5000/protected/user', {
+      const response = await fetch(getBackendUrl() + '/protected/user', {
         method: 'GET',
         headers: {
           Authorization: token,
